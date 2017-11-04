@@ -45,6 +45,7 @@ build:
         name: go build
         code: |
           go build
+          ls
 
     # Test the project
     - script:
@@ -55,14 +56,16 @@ build:
     - script:
         name: copy files to wercker output
         code: |
+          echo ${WERCKER_OUTPUT_DIR}
           cp -R ./ ${WERCKER_OUTPUT_DIR}
+
 
 deploy:
   steps:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
-        cmd: /pipline/source/beeDemo
+        cmd: /pipline/output/beeDemo
         port: "8080"
         tag: latest
         repository: neatline/beeDemo
