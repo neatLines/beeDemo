@@ -26,6 +26,10 @@ build:
     # at the right place in the workspace tree
     - setup-go-workspace:
       package-dir: github.com/neatLines/beeDemo
+
+    - script:
+        name: env
+        code: env
     # Gets the dependencies
     - script:
         name: go get
