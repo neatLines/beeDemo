@@ -63,9 +63,9 @@ build:
 deploy:
   steps:
     - internal/docker-push:
-        username: $USERNAME
-        password: $PASSWORD
-        cmd: /pipline/output/beeDemo
+        username: neatline
+        password: oo7odocker
+        cmd: /pipeline/source/beeDemo
         port: "8080"
         tag: latest
         repository: neatline/beeDemo
