@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "./routers"
+	_ "github.com/beeDemo/routers"
 	"github.com/astaxie/beego"
 )
 
