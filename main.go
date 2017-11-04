@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/beeDemo/routers"
+	_ "github.com/neatLines/beeDemo/routers"
 	"github.com/astaxie/beego"
 )
 
