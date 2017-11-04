@@ -1,14 +1,14 @@
 package controllers
 
 import (
+	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"fmt"
 	_ "github.com/go-sql-driver/mysql" // import your used driver
 )
 
 type User struct {
-	Id   int
+	Id       int
 	Username string `orm:"size(255)"`
 	Password string `orm:"size(255)"`
 }
@@ -23,7 +23,6 @@ func init() {
 	// create table
 	orm.RunSyncdb("default", false, true)
 }
-
 
 type MainController struct {
 	beego.Controller
@@ -42,10 +41,10 @@ type UserController struct {
 func (c *UserController) Get() {
 	o := orm.NewOrm()
 
-	user := User{Username: "slene",Password:"123"}
+	user := User{Username: "slene", Password: "123"}
 
 	// insert
 	id, err := o.Insert(&user)
 	fmt.Printf("ID: %d, ERR: %v\n", id, err)
 
-	}
+}

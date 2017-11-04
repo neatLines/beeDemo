@@ -49,13 +49,13 @@ build:
         code: |
           cp -R ./ ${WERCKER_OUTPUT_DIR}
 
-    deploy:
-      steps:
-        - internal/docker-push:
-            username: $USERNAME
-            password: $PASSWORD
-            cmd: /pipline/source/beeDemo
-            port: "8080"
-            tag: latest
-            repository: neatline/beeDemo
-            registry: https://registry.hub.docker.com
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        cmd: /pipline/source/beeDemo
+        port: "8080"
+        tag: latest
+        repository: neatline/beeDemo
+        registry: https://registry.hub.docker.com

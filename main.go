@@ -1,11 +1,10 @@
 package main
 
 import (
-	_ "github.com/neatLines/beeDemo/routers"
 	"github.com/astaxie/beego"
+	_ "github.com/neatLines/beeDemo/routers"
 )
 
 func main() {
 	beego.Run()
 }
-
